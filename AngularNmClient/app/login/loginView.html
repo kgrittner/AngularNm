@@ -1,0 +1,55 @@
+﻿
+
+
+<!--------------------------------------------
+--- Login Form
+---------------------------------------------->
+
+
+<form class="col-md-4 col-md-offset-4" style="margin-top: 100px">
+
+    <!--Login Title-->
+    <div class="row">
+        <div class="text-center"
+             style="font-size: 25px; font-weight: 100; padding-bottom: 10px">
+            Login
+        </div>
+    </div>
+
+    <!--Email-->
+    <div class="row form-group form-group-lg">
+        <input class="form-control"
+               type="text" name="email" placeholder="Email"
+               ng-model="user.email"/>
+    </div>
+
+    <!--Password-->
+    <div class="row form-group form-group-lg">
+        <input class="form-control"
+               type="password" name="password" placeholder="Password"
+               ng-model="user.password"/>
+    </div>
+
+    <!--Submit-->
+    <div class="row form-group form-group-lg">
+        <div class="btn btn-primary form-control col-md-12"
+             ng-click="login()">
+            Login
+        </div>
+    </div>
+
+    <!--Submit-->
+    <div class="row form-group form-group-lg">
+        <div class="btn btn-link form-control col-md-12"
+             ng-click="registerUser()">
+            Register
+        </div>
+    </div>
+
+    <div>{{registrationSuccessMessage}}</div>
+
+    <div>{{message}}</div>
+
+</form>
+
+

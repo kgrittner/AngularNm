@@ -1,0 +1,62 @@
+﻿<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Angular .NET App</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                <!--Login-->
+                <li >
+                    <a ui-sref="app.login">Login</a>
+                </li>
+
+                <!--Products-->
+                <li ng-if="mc.isLoggedIn()">
+                    <a ui-sref="app.products">Products</a>
+                </li>
+
+
+
+
+                <li ng-if="mc.isLoggedIn()">
+                    <a ui-sref="app.productsEdit">Products Edit</a>
+                </li>
+
+                <li ng-if="mc.isLoggedIn()">
+                    <a ui-sref="app.productsList">Products List</a>
+                </li>
+
+
+            </ul>
+
+
+            <!--Right-->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <!--Logout-->
+                <li ng-if="mc.isLoggedIn()" ng-click="mc.logout()">
+                    <a ui-sref="app.login">Logout</a>
+                </li>
+
+
+
+                <!--Email-->
+                <li ng-if="mc.isLoggedIn()"><a id="navRightUserEmail">{{mc.profile.email}}</a></li>
+            </ul>
+
+
+
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+
+    <title ng-bind="$state.current.data.pageTitle"></title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.0.0/jasmine_favicon.png">
+    <link rel="stylesheet" type="text/css" href="lib/jasmine-2.0.0/jasmine.css">
+
+    <script type="text/javascript" src="lib/jasmine-2.0.0/jasmine.js"></script>
+    <script type="text/javascript" src="lib/jasmine-2.0.0/jasmine-html.js"></script>
+    <script type="text/javascript" src="lib/jasmine-2.0.0/boot.js"></script>
+
+</head>
+
+
+<body ng-controller="MainController as mc">
+
+
+    <!---->
+
+
+
+
+
+
+    <!--Scripts-->
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/oclazyload/dist/ocLazyLoad.js"></script>
+    <script src="Scripts/angular-mocks.js"></script>
+    <script src="Scripts/angular-cookies.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    
+
+    <!--App-->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/config.lazyload.js"></script>
+    <script src="app/config.router.js"></script>
+
+
+    <!--Spec Helpers-->
+    <script src="lib/ns-test.js"></script>
+
+
+    <!--Common-->
+    <script src="app/common/common.services.js"></script>
+    <script src="app/common/currentUser.js"></script>
+    <script src="app/common/userAccount.js"></script>
+
+
+    <!--Controllers-->
+    <script src="app/mainController.js"></script>
+    <script src="app/login/loginController.js"></script>
+    <script src="app/tests/test.js"></script>
+
+
+
+
+    <!--Specs common.services-->
+    <script src="app/common/currentUserSpec.js"></script>
+    <script src="app/common/userAccountSpec.js"></script>
+
+    <!--<script src="app/tests/testSpec.js"></script>-->
+    <!--<script src="app/login/loginController.js"></script>-->
+    <!--<script src="app/products/productsController.js"></script>-->
+    <script src="app/login/loginControllerSpec.js"></script>
+</body>
+</html>
